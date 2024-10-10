@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab 7</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Мини графический редактор через svg</h1>
+    
+    <div class="toolsConatainer">
+        <label for="shape">Выберите фигуру:</label>
+        <select id="shape">
+            <option value="circle">Круг</option>
+            <option value="rect">Прямоугольник</option>
+            <option value="triangle">Треугольник</option>
+            <option value="ellipse">Овал</option>
+            <option value="pentagon">Пятиугольник</option>
+            <option value="line">Отрезок</option>
+        </select>
+        <label for="fillColorsContainer">Выберите цвет заливки:</label>
+        <div id="fillButtonsContainer" class="colorButtonsContainer">
+            <!-- Кнопки для выбора цвета заливки -->
+            <button class="fillColorButton" id="fillColorRed" style="background-color: red;"></button>
+            <button class="fillColorButton" id="fillColorGreen" style="background-color: green;"></button>
+            <button class="fillColorButton" id="fillColorBlue" style="background-color: blue;"></button>
+            <button class="fillColorButton" id="fillColorBlack" style="background-color: black;"></button>
+            <button class="fillColorButton" id="fillColorYellow" style="background-color: yellow;"></button>
+            <button class="fillColorButton" id="fillColorTransparent" style="background-color: white;"></button>
+        </div>
+        <button class="clearButtons" id="clearAllButton">Очистить все</button>
+    </div>
+    <div class="toolsConatainer">
+        <div class="lineWidthContainer">
+            <label for="lineWidth">Толщина линии: </label>
+            <input type="range" id="lineWidth" min="1" max="10" value="2">
+            <span id="lineWidthValue">2</span>
+        </div>
+        <label for="lineColorsContainer">Выберите цвет линии:</label>
+        <div id="lineButtonsContainer" class="colorButtonsContainer">
+            <!-- Кнопки для выбора цвета линии -->
+            <button class="colorButton" id="colorRed" style="background-color: red;"></button>
+            <button class="colorButton" id="colorGreen" style="background-color: green;"></button>
+            <button class="colorButton" id="colorBlue" style="background-color: blue;"></button>
+            <button class="colorButton" id="colorBlack" style="background-color: black;"></button>
+            <button class="colorButton" id="colorYellow" style="background-color: yellow;"></button>
+        </div>
+        <button class="clearButtons" id="clearButton">Откатить</button>
+    </div>
+    
+    <svg id="svgCanvas" height="500px" width="800px">
+        <!-- Здесь будут рисоваться фигуры -->
+    </svg>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

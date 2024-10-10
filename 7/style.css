@@ -1,0 +1,117 @@
+/* Основные стили для страницы */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #92A8D1;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+h1 {
+    background-color: #6B5B95;
+    color: white;
+    padding: 10px;
+    margin: 0;
+}
+
+/* Стили для контейнера с выбором фигуры и кнопкой */
+div {
+    margin: 10px 0;
+}
+
+/* Стили для выпадающего списка и кнопки */
+label {
+    font-size: 18px;
+    color: #333;
+    margin-right: 10px;
+}
+
+select, button {
+    font-size: 16px;
+    padding: 10px;
+    margin: 0 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+button.clearButtons {
+    background-color: #D64161; /* Красный */
+    color: white;
+    transition: background-color 0.3s;
+}
+
+button.clearButtons:hover {
+    background-color: #c73d5b;
+}
+
+/* Стили для холста (SVG) */
+svg#svgCanvas {
+    background-color: #fff;
+    border: 1px solid #000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: crosshair;
+    border-radius: 5vh;
+}
+
+/* Стили для рисуемых фигур */
+circle, rect, polygon, ellipse {
+    stroke-linejoin: round;
+    stroke-linecap: round;
+}
+
+/* Стиль для выбранной фигуры в выпадающем списке */
+select:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+/* Стили для кнопок выбора цвета */
+button.colorButton, button.fillColorButton {
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 50%;
+    margin: 0 auto;
+    cursor: pointer;
+    outline: none;
+    transition: transform 0.3s ease;
+}
+
+button.colorButton:hover, button.fillColorButton:hover {
+    transform: scale(1.1);
+}
+
+.fillColorButton:disabled {
+    opacity: 0.5; 
+    pointer-events: none; 
+}
+
+.toolsConatainer, .lineWidthContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.lineWidthContainer {
+    padding-right: 10px;
+    border-right: 2px solid #333 ;
+}
+
+.lineWidthContainer {
+    margin: 0 10px;
+}
+
+#lineWidthValue{
+    margin-left: 5px;
+}
+
+/* Стили для портретной ориентации */
+@media (orientation: portrait) {
+    .toolsConatainer {
+        flex-direction: column;
+    }
+}
+
